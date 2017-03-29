@@ -1,0 +1,139 @@
+1. Explain about the different complex data types in pig ?
+
+ATOM
+Any single value in Pig Latin, irrespective of their data or type is known as an Atom.`
+A simple atomic or piece of data value is known as a field.
+Example − ‘sowmiyan’ or ‘100’
+
+TUPLE
+
+A record that is formed by an ordered set of fields is known as a tuple, the fields can
+be of any type.
+
+Example- (sowmiyan,100)
+
+BAG
+
+A bag is an unordered set of tuples.
+In other words, a collection of tuples (non-unique) is known as a bag.
+A bag can have duplicate tuples.
+A bag can have tuples with differing numbers of fields. However, if Pig tries to access a field that does not exist, a null value is substituted.
+A bag can have tuples with fields that have different data types.
+
+Example − {(suresh, 15), (ramesh, 30)}
+
+MAP
+
+A map (or data map) is a set of key-value pairs. 
+The key needs to be of type chararray and should be unique.
+The value might be of any type.
+It is represented by ‘[]’.
+
+Example: [name#sowmiyan, age#24]
+
+
+2. How can you interact with the shell in Apache pig ?
+
+There are two ways:
+
+                      1) With Grunt shell.
+                      2) Using script files.
+                      
+With GRUNT SHELL:
+
+Interactive Shell for executing Pig Commands
+Can execute scripts from Grunt via run or exec commands
+Used when script file is not provided
+
+Using SCRIPT FILES:
+
+Executes Commands in a file
+Pig ScriptFile.pig
+Pig commands are executed using script files as batch Jobs
+
+
+3. Explain how pig differs from Map reduce ?
+
+PIG
+
+-Apache Pig is a data flow language.	
+-It is a high level language.	
+-Performing a Join operation in Apache Pig is pretty simple.	
+-Any novice programmer with a basic knowledge of SQL can work conveniently with Apache Pig.	
+-Apache Pig uses multi-query approach, thereby reducing the length of the codes to a great extent.	
+-There is no need for compilation.
+-On execution, every Apache Pig operator is converted internally into a MapReduce job.	
+
+MAP REDUCE
+
+-MapReduce is a data processing paradigm.
+-MapReduce is low level and rigid.
+-It is quite difficult in MapReduce to perform a Join operation between datasets.
+-MapReduce will require almost 20 times more the number of lines to perform the same task.
+-MapReduce jobs have a long compilation process.
+
+
+
+4. Explain how pig differs from sql ?
+
+PIG:
+
+-Pig Latin is a procedural language.	
+-In Apache Pig, schema is optional. We can store data without designing a schema (values are stored as $01, $02 etc.)	
+-The data model in Apache Pig is nested relational.	
+-Apache Pig provides limited opportunity for Query optimization.
+
+SQL :
+
+-SQL is a declarative language.
+-Schema is mandatory in SQL.
+-The data model used in SQL is flat relational.
+-There is more opportunity for query optimization in SQL.
+
+
+
+5. Explain the scalar data types in pig
+
+The scalar Data Types in pig are
+1.Int
+2.Long
+3.Float
+4.Doublr
+5.Chararray
+6.Bytearray
+
+
+INT
+
+It is like integer datatype in java. Int are represented in interfaces by java.lang.Integer.
+They store a four-byte signed integer. Constant integers are expressed as integer numbers, for example, 42.
+
+LONG
+
+It is like Long datatype in java. Longs are represented in interfaces by java.lang.Long.
+They store an eight-byte signed integer. Constant longs are expressed as integer numbers with an L appended, for example, 5000000000L.
+
+FLOAT
+
+It is like integer datatype in java A floating-point number.
+Floats are represented in interfaces by java.lang.Float and use four bytes to store their value.
+Since this is a floating-point number, in some calculations it will lose precision.
+For calculations that require no loss of precision, you should use an int or long instead.
+Constant floats are expressed as a floating-point number with an f appended.
+Floating-point numbers can be expressed in simple format, 3.14f, or in exponent format, 6.022e23f.
+
+DOUBLE
+
+A double-precision floating-point number.
+Doubles are represented in interfaces by java.lang.Double and use eight bytes to store their value.
+You can find the range of values representable by Java’s Double type.
+Note that because this is a floating-point number, in some calculations it will lose precision.
+For calculations that require no loss of precision, you should use an int or long instead.
+Constant doubles are expressed as a floating-point number in either simple format, 2.71828, or in exponent format, 6.626e-34.
+
+CHARARRAY
+
+ Chararrays are represented in interfaces by java.lang.String.
+ Constant chararrays are expressed as string literals with single quotes, for example, 'SOWMIYAN'.
+ In addition to standard alphanumeric and symbolic characters, you can express certain characters in chararrays by using backslash codes,
+ such as \t for Tab and \n for Return. Unicode characters can be expressed as \u followed by their four-digit hexadecimal Unicode value.
